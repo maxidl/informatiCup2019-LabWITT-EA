@@ -18,8 +18,14 @@ assuming that a generated fooling image also fools another network.
 
 ## Install
 
-#### Create virutal environment and install packages
+## Prerequisites
 __Python3.6__ is required, which is the default python version in __Ubuntu 18.04 LTS__.
+In order to execute this tool on a target model that is provided by the GI, an API key is required 
+and has to be specified in 
+[config.json](
+./config.json).
+
+## Create virtual environment and install packages
 ```bash
 cd informatiCup2019-LabWITT-EA
 sudo apt install python3-venv python3-tk python3-dev
@@ -27,12 +33,6 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
-
-## Prerequisites
-In order to execute this tool on a target model that is provided by the GI, an API key is required 
-and has to be specified in 
-[config.json](
-./config.json).
 
 ## Execute
 Make sure you are in the previously created virtual env, indicated by `(venv)` at the beginning of your bash. (Enter the virtual env with `source venv/bin/activate` and leave it by typing `deactivate`)
