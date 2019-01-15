@@ -82,7 +82,7 @@ def main():
         ea.run()
         if args.statistic:
             ea.print_statistic()
-    print("Results can be viewed in folder 'InformatiCup2019/results/'")
+    print("Results can be viewed in folder 'informaticup2019-LabWITT-EA/results/'")
 
 
 if __name__ == '__main__':
