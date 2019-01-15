@@ -20,7 +20,6 @@ assuming that a generated fooling image also fools another network.
 
 #### Clone this repository
 ```bash
-sudo apt install git
 git clone https://github.com/MaximilianIdahl/informatiCup2019-LabWITT-EA.git
 ```
 
@@ -40,45 +39,44 @@ and has to be specified in
 ./config.json).
 
 ## Execute
-If you are outside this project folder, the following examples demonstrate how to execute the program. If you are inside this project folder, replace `InformatiCup2019-LabWITT-EA` with `__main__.py`.
-Additionally make sure you are in the previously created virtual env, indicated by `(venv)` at the beginning of your bash. (Enter the virtual env with `source venv/bin/activate` and leave it by typing `deactivate`)
+Make sure you are in the previously created virtual env, indicated by `(venv)` at the beginning of your bash. (Enter the virtual env with `source venv/bin/activate` and leave it by typing `deactivate`)
 #### Random fooling image for specific class
 Basic approach, random image, e.g. class index 2.
 ``` bash
-python3 informatiCup2019-LabWITT-EA -c 2 -l
+python3 __main__.py -c 2 -l
 ```
 
-![Zulässige Höchstgeschwindigkeit (50): 94%](examples/examples_readme_random_02.png)
-![Zulässige Höchstgeschwindigkeit (50): 94%](examples/examples_readme_random_02.gif)
+![](examples/examples_readme_random_02.png "Zulässige Höchstgeschwindigkeit (50): 94%")
+![](examples/examples_readme_random_02.gif "Zulässige Höchstgeschwindigkeit (50): 94%")
 
 #### Random fooling image with Polygons for specific class
 Uses random polygons with 3-5 edges to create the fooling image, e.g. class index 2.
 ``` bash
-python3 informatiCup2019-LabWITT-EA -l -p -c 2
+python3 __main__.py -l -p -c 2
 ```
 
-![Zulässige Höchstgeschwindigkeit (50): 95%](examples/examples_readme_poly_02.png)
-![Zulässige Höchstgeschwindigkeit (50): 95%](examples/examples_readme_poly_02.gif)
+![](examples/examples_readme_poly_02.png "Zulässige Höchstgeschwindigkeit (50): 95%")
+![](examples/examples_readme_poly_02.gif "Zulässige Höchstgeschwindigkeit (50): 95%")
 
 #### Fooling image for specific class using an input image as aid
 Some classes are hard to fool, since they are most likely not in the top-5 result from a random 
 image. Therefore a fooling image for a stop sign can be created by starting off with a stop sign. The input image has to be 64x64 and should be in the top 5 results of the target network.
 ``` bash
-python3 informatiCup2019-LabWITT-EA -o path-to-your-png -l -c 2
+python3 __main__.py -o path-to-your-png -l -c 2
 ```
 
-![Original: Zulässige Höchstgeschwindigkeit (50): 99%](examples/examples_readme_original_02.png)
-![Zulässige Höchstgeschwindigkeit (50): 95%](examples/examples_readme_original_fool_02.png)
-![Zulässige Höchstgeschwindigkeit (50): 95%](examples/examples_readme_original_fool_02.gif)
+![](examples/examples_readme_original_02.png "Original: Zulässige Höchstgeschwindigkeit (50): 99%")
+![](examples/examples_readme_original_fool_02.png "Zulässige Höchstgeschwindigkeit (50): 95%")
+![](examples/examples_readme_original_fool_02.gif "Zulässige Höchstgeschwindigkeit (50): 95%")
 
 #### Fooling image for any class using grey polygons
 A gray fooling image with polygons is created, which class it fools is not further specified (-1).
 ``` bash
-python3 informatiCup2019-LabWITT-EA -p -g -l -c -1
+python3 __main__.py -p -g -l -c -1
 ```
 
-![Zulässige Höchstgeschwindigkeit (60): 98%](examples/examples_readme_poly_03.png)
-![Zulässige Höchstgeschwindigkeit (60): 98%](examples/examples_readme_poly_03.gif)
+![](examples/examples_readme_poly_03.png "Zulässige Höchstgeschwindigkeit (60): 98%")
+![](examples/examples_readme_poly_03.gif "Zulässige Höchstgeschwindigkeit (60): 98%")
 
 ### Results
 The fooling image is stored in [results](./results). Additionally a GIF showing the image evolution
