@@ -13,7 +13,7 @@ def check_invalid_args(args):
 
 
 def main():
-    parser = argparse.ArgumentParser(prog="python3 InformatiCup2019")
+    parser = argparse.ArgumentParser()
     parser.add_argument("-l", "--local_models", help="Use local models for fooling",
                         action="store_true")
     parser.add_argument("-o", "--original", help="Input image as startup aid")

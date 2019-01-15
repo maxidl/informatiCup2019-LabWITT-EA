@@ -18,18 +18,14 @@ assuming that a generated fooling image also fools another network.
 
 ## Install
 
-#### Clone this repository
-```bash
-git clone https://github.com/MaximilianIdahl/informatiCup2019-LabWITT-EA.git
-```
-
 #### Create virutal environment and install packages
+__Python3.6__ is required, which is the default python version in __Ubuntu 18.04 LTS__.
 ```bash
-cd InformatiCup2019-LabWITT-EA
+cd informatiCup2019-LabWITT-EA
 sudo apt install python3-venv python3-tk python3-dev
 python3 -m venv venv
 source venv/bin/activate
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
 ## Prerequisites
