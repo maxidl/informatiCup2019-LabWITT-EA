@@ -1,0 +1,22 @@
+{
+  "api_url": "https://phinau.de/trasi",
+  "api_key": "<insert api key here>",
+  "class_label_list": "res/index_label_dict.csv",
+  "local_models": [
+    "res/models/alex_e5_rgb/model.h5",
+    "res/models/alex_gs/model.h5"
+  ],
+  "ea_params_other": {
+    "pop_size": 30,
+    "copy": 5,
+    "random": 5,
+    "mutate_only": 5,
+    "max_gen": 500,
+    "min_conf": 0.95,
+    "width_x": 64,
+    "width_y": 64,
+    "mutation_prob": 0.0001,
+    "mutation_step": 0.25,
+    "mutation_linear": false
+  }
+}

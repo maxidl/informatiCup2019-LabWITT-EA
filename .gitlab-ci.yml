@@ -1,0 +1,46 @@
+stages:
+  - install
+  - codestyle
+  - opentask
+
+#########################################
+###### Installing all dependencies ######
+#########################################
+inst:
+    stage: install
+    script:
+        - mkdir res/models
+        - cp -r /var/models/* ./res/models/
+        - pip3 install --user "numpy==1.15.3"
+        - pip3 install -r requirements.txt
+        - python3 -m unittest discover .
+
+
+#########################################
+########## Checking code style ##########
+#########################################
+
+linter:
+    stage: codestyle
+    script:
+        - echo "Running linter for project"
+        - ~/.local/bin/pylama __main__.py src/
+
+    before_script:
+        - apt update
+        - pip3 install --user pylama
+
+
+#########################################
+########## Checking open tasks ##########
+#########################################
+
+todos:
+    stage: opentask
+    script:
+        - grep -ir "todo" > /tmp/todos.txt
+        - todos=$(wc -l < /tmp/todos.txt)
+        - if [ ${todos} -gt 0 ]; then  echo "${todos} TODOs sind noch offen"; fi
+        # exit == 0 no error, exit > 0 error
+        - exit ${todos};
+    allow_failure: true
