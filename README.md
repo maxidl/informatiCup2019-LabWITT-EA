@@ -97,3 +97,8 @@ A [config](./config.json) file contains some more values which can be changed, b
 By default, two local networks are used for our approach.
 If you want to train your own models, check out our repo:
 https://github.com/MaximilianIdahl/gtsrb-models-keras.
+
+### Future Work and Todos
+* Develop a web-based application of this tool 
+* Support to set local models easy as target
+* Integrate the functionality of the CPPN repository (but only support torch?)
