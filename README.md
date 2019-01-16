@@ -16,7 +16,7 @@ We solved it by using an Evolutionary Algorithm (EA) in combination with an ense
 trained models 
 assuming that a generated fooling image also fools another network.
 
-The theoretical background, implementation details and results are highlighted in our [short paper](http://jtheiner.de/a6sg26io/paper.pdf). To reproduce the results of our blac-box analysis you can use the raw data ([test_images_analysis_full.csv](http://jtheiner.de/a6sg26io/test_images_analysis_full.csv)) and the respective analysis script [analyze_blackbox.py](experiments/analysis/analyze_blackbox.py).
+The theoretical background, implementation details and results are highlighted in our [short paper](http://jtheiner.de/a6sg26io/paper.pdf). To reproduce the results of our black-box analysis you can use the raw data ([test_images_analysis_full.csv](http://jtheiner.de/a6sg26io/test_images_analysis_full.csv)) and the respective analysis script [analyze_blackbox.py](experiments/analysis/analyze_blackbox.py).
 
 ## Install
 
