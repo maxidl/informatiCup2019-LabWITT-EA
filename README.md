@@ -16,6 +16,8 @@ We solved it by using an Evolutionary Algorithm (EA) in combination with an ense
 trained models 
 assuming that a generated fooling image also fools another network.
 
+The theoretical background, implementation details and results are highlighted in our [short paper](http://jtheiner.de/a6sg26io/paper.pdf).
+
 ## Install
 
 ## Prerequisites
