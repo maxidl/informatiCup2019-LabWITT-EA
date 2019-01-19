@@ -37,7 +37,7 @@ pip install -r requirements.txt
 ```
 
 ## Execute
-Make sure you are in the previously created virtual env, indicated by `(venv)` at the beginning of your bash. (Enter the virtual env with `source venv/bin/activate` and leave it by typing `deactivate`)
+Make sure you are in the previously created virtual environment, indicated by `(venv)` at the beginning of your bash. (Enter the virtual environment with `source venv/bin/activate` and leave it by typing `deactivate`)
 #### Random fooling image for specific class
 Basic approach, random image, e.g. class index 2.
 ``` bash

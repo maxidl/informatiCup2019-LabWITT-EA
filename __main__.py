@@ -7,7 +7,7 @@ from src.ea import evolutionary_algorithm as evol
 
 
 def check_invalid_args(args):
-    if args.grayscale is not None and args.original is not None:
+    if args.grayscale and args.original is not None:
         print("The combination of '-o' and '-g' is not supported.")
         exit()
 
