@@ -27,7 +27,7 @@ def load_image(fname: str, size: int = None) -> np.ndarray:
         image = img_as_float32(image)
         if size is not None:
             image = transform.resize(image, (size, size), mode='constant', anti_aliasing=True)
-        if len(image.shape) == 4:
+        if image.ndim == 3 and image.shape[2] == 4:
             image = image[:, :, :3]
     return image
 
